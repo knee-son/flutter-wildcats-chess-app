@@ -32,3 +32,8 @@ With Git installed, you can now install Flutter using Chocolatey:
 ```powershell
 choco install flutter
 ```
+
+Git should also know that Flutter's directory, installed via Chocolatey, is a safe directory. So we declare this:
+```powershell
+git config --global --add safe.directory C:/tools/flutter
+```
