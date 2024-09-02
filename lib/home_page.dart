@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
+import 'package:wildcats_chess_app/animations.dart';
 import 'package:wildcats_chess_app/clock_page.dart';
 import 'package:wildcats_chess_app/swissmanager_page.dart';
 
@@ -10,7 +11,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Wildcats Chess App'),
+        title: const Text('Wildcats 😺',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            )),
       ),
       drawer: Drawer(
         child: ListView(
@@ -18,11 +22,12 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Color.fromARGB(255, 163, 202, 239),
               ),
               child: Text(
-                'Navigation',
+                'Hello, how\'s chess?',
                 style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   color: Colors.white,
                   fontSize: 24,
                 ),
@@ -52,17 +57,51 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(children: <Widget>[
+      body: Stack(children: <Widget>[
         Container(
-          color: Colors.grey, // Set the background color here
+          color: const Color.fromARGB(255, 217, 222, 241),
+
           padding:
               const EdgeInsets.all(16.0), // Optional: Add padding if needed
-          child: Image.asset(
-            'assets/images/publication_logo_transparent.png',
-            fit: BoxFit.contain,
+          height: MediaQuery.of(context).size.height -
+              AppBar().preferredSize.height -
+              MediaQuery.of(context).padding.top,
+          child: const Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding:
+                    EdgeInsets.only(bottom: 60), // Apply 10 pixels of padding
+                child: Text(
+                  'Shimenet like my app!',
+                  style: TextStyle(
+                    fontFamily: 'Arial',
+                    // fontWeight: FontWeight.bold,
+                    fontSize: 28,
+                  ),
+                  textAlign: TextAlign.center, // Center-align the text
+                ),
+              ),
+              BounceOnTap(
+                asset: Image(
+                  image: AssetImage(
+                      'assets/images/publication_logo_transparent.png'),
+                  fit: BoxFit.contain,
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(10.0), // Apply 10 pixels of padding
+                child: Text(
+                  '“When the game is over, the king and pawn go into the same box.”',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                  textAlign: TextAlign.center, // Center-align the text
+                ),
+              ),
+            ],
           ),
         ),
-        const Text('asdf'),
       ]),
     );
   }
