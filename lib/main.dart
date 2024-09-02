@@ -12,18 +12,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'WildCats Chess App',
+      title: 'WildCats 😺',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         primaryColor: Colors.amber,
-        scaffoldBackgroundColor: Colors.white,
+        scaffoldBackgroundColor: Colors.cyan[170],
         // Define other colors
         buttonTheme: const ButtonThemeData(
           buttonColor: Colors.blue, // Background color of buttons
         ),
         textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.black), // Text color
-          bodyMedium: TextStyle(color: Colors.grey),
+          bodyMedium: TextStyle(color: Colors.black87),
         ),
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromARGB(255, 110, 9, 41),
