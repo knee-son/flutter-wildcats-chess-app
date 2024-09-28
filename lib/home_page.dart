@@ -59,7 +59,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Stack(children: <Widget>[
         Container(
-          color: const Color.fromARGB(255, 217, 222, 241),
+          color: const Color.fromARGB(255, 190, 189, 196),
 
           padding:
               const EdgeInsets.all(16.0), // Optional: Add padding if needed

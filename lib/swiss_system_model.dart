@@ -21,3 +21,8 @@ class Match {
     this.player2Score,
   });
 }
+
+class Tournament {
+  List<Participant> players = [];
+  List<Match> matches = [];
+}
