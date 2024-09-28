@@ -14,6 +14,13 @@ class _TournamentManagerPageState extends State<TournamentManagerPage> {
     Participant(id: '002', name: 'Bob'),
   ];
 
+  @override
+  void initState() {
+    super.initState();
+    // Print participants when the state is initialized
+    print('Participants loaded: $participants');
+  }
+
   void increaseScore(Participant participant) {
     setState(() {
       participant.score += 1;

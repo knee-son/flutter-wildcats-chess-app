@@ -23,6 +23,13 @@ class Match {
 }
 
 class Tournament {
+  final String name;
   List<Participant> players = [];
   List<Match> matches = [];
+
+  Tournament({
+    required this.name,
+    required this.players,
+    required this.matches,
+  })
 }
