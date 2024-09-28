@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import 'package:wildcats_chess_app/animations.dart';
 import 'package:wildcats_chess_app/clock_page.dart';
-import 'package:wildcats_chess_app/swissmanager_page.dart';
+import 'package:wildcats_chess_app/tournament_manager_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -40,7 +40,7 @@ class HomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const SwissManagerPage()),
+                      builder: (context) => const TournamentManagerPage()),
                 );
               },
             ),
