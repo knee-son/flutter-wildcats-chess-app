@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wildcats_chess_app/swiss_system_model.dart';
+import 'package:wildcats_chess_app/tournament_creation_modal.dart';
 
 class TournamentManagerPage extends StatefulWidget {
   const TournamentManagerPage({super.key});
@@ -33,20 +34,22 @@ class TournamentManagerPageState extends State<TournamentManagerPage> {
       appBar: AppBar(
         title: const Text('Participants'),
       ),
-      body: ListView.builder(
-        itemCount: participants.length,
-        itemBuilder: (context, index) {
-          Participant participant = participants[index];
-          return ListTile(
-            title: Text(participant.name),
-            subtitle: Text('Score: ${participant.score}'),
-            trailing: ElevatedButton(
-              onPressed: () => increaseScore(participant),
-              child: const Text('Increase Score'),
-            ),
-          );
-        },
-      ),
+      // body: ListView.builder(
+      //   itemCount: participants.length,
+      //   itemBuilder: (context, index) {
+      //     Participant participant = participants[index];
+      //     return ListTile(
+      //       title: Text(participant.name),
+      //       subtitle: Text('Score: ${participant.score}'),
+      //       trailing: ElevatedButton(
+      //         onPressed: () => increaseScore(participant),
+      //         child: const Text('Increase Score'),
+      //       ),
+      //     );
+      //   },
+      // ),
+
+      body: const TournamentCreationModal(),
     );
   }
 }
