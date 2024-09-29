@@ -5,10 +5,10 @@ class TournamentManagerPage extends StatefulWidget {
   const TournamentManagerPage({super.key});
 
   @override
-  _TournamentManagerPageState createState() => _TournamentManagerPageState();
+  TournamentManagerPageState createState() => TournamentManagerPageState();
 }
 
-class _TournamentManagerPageState extends State<TournamentManagerPage> {
+class TournamentManagerPageState extends State<TournamentManagerPage> {
   List<Participant> participants = [
     Participant(id: '001', name: 'Alice'),
     Participant(id: '002', name: 'Bob'),
