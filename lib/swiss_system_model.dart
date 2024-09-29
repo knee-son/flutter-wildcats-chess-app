@@ -31,5 +31,5 @@ class Tournament {
     required this.name,
     required this.players,
     required this.matches,
-  })
+  });
 }
