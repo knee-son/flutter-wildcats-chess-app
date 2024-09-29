@@ -4,11 +4,10 @@ class TournamentCreationModal extends StatefulWidget {
   const TournamentCreationModal({super.key});
 
   @override
-  _TournamentCreationModalState createState() =>
-      _TournamentCreationModalState();
+  TournamentCreationModalState createState() => TournamentCreationModalState();
 }
 
-class _TournamentCreationModalState extends State<TournamentCreationModal> {
+class TournamentCreationModalState extends State<TournamentCreationModal> {
   bool isRoundRobin = true; // Toggle between 'Round Robin' and 'Swiss System'
 
   @override
@@ -21,21 +20,21 @@ class _TournamentCreationModalState extends State<TournamentCreationModal> {
               context: context,
               builder: (BuildContext context) {
                 return Container(
-                  padding: EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(16.0),
                   height: 300,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Text(
+                      const Text(
                         'Select Tournament Type',
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('Round Robin'),
+                          const Text('Round Robin'),
                           Switch(
                             value: isRoundRobin,
                             onChanged: (bool value) {
@@ -44,16 +43,16 @@ class _TournamentCreationModalState extends State<TournamentCreationModal> {
                               });
                             },
                           ),
-                          Text('Swiss System'),
+                          const Text('Swiss System'),
                         ],
                       ),
-                      Spacer(),
+                      const Spacer(),
                       ElevatedButton(
                         onPressed: () {
                           // Handle create action
                           Navigator.pop(context);
                         },
-                        child: Text('Create'),
+                        child: const Text('Create'),
                       ),
                     ],
                   ),
@@ -61,7 +60,7 @@ class _TournamentCreationModalState extends State<TournamentCreationModal> {
               },
             );
           },
-          child: Text('Open Tournament Modal'),
+          child: const Text('Open Tournament Modal'),
         ),
       ),
     );
